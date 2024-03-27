@@ -1,0 +1,45 @@
+.rates-section {
+
+  // .rates-section__heading
+
+  &__heading {
+    &--mobile {
+      display: grid;
+
+      position: sticky;
+      top: 55px;
+
+      padding-block: 5px 10px;
+
+      background-color: #fff;
+      border-bottom: 1px solid #E9EDF0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__heading {
+      &:not(.rates-section__heading--mobile) {
+        .rate-table-row__cell {
+          display: none;
+
+          &--title {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 768px) {
+    &__heading {
+      display: grid;
+
+      .title {
+        margin-bottom: 0 !important;
+      }
+
+      &--mobile {
+        display: none;
+      }
+    }
+  }
+}

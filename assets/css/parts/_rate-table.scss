@@ -1,0 +1,96 @@
+.rate-table {
+  margin-bottom: 10px;
+
+  font-size: 14px;
+  font-weight: 500;
+  color: #435259;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .rate-table-row {
+    margin-bottom: 0;
+
+    &__cell {
+      padding: 9px;
+
+      justify-content: center;
+
+      border-radius: 4px;
+
+      &--title {
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .rate-table-row {
+      gap: 0;
+
+      &__cell {
+        &--title {
+          background-color: #F5FAF6;
+          margin-bottom: 5px;
+        }
+      }
+
+      &:last-child {
+        border-bottom: 1px solid #EDF7EF;
+      }
+    }
+  }
+
+  @media (min-width: 576px) {
+    .rate-table-row {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        inset: -4px;
+
+        pointer-events: none;
+        border-radius: 7px;
+        border: 1px solid #10A642;
+        z-index: 2;
+
+        opacity: 0;
+      }
+
+      &__cell {
+        padding-block: 7px;
+      }
+
+      &:nth-child(odd) {
+        .rate-table-row__cell {
+          background-color: #F5FAF6;
+        }
+      }
+
+      &:nth-child(even) {
+        &::after {
+          top: 0;
+          bottom: 0;
+        }
+
+        &:last-child {
+          .rate-table-row__cell {
+            border-bottom: 1px solid #EDF7EF;
+          }
+        }
+      }
+
+      &:hover {
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+.service-page {
+  font-family: 'PTRootUI', sans-serif;
+  // .service-page__heading
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 13px;
+
+    font-weight: 400;
+    font-size: 25px;
+    color: #435259;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+
+    b,
+    strong {
+      font-weight: bold;
+    }
+
+    > .title {
+      font-size: inherit;
+      font-weight: inherit;
+    }
+
+    .sub-title {
+      font-weight: bold;
+    }
+  }
+
+  @media (min-width: 576px) {
+    &__heading {
+      font-size: 30px;
+    }
+  }
+}

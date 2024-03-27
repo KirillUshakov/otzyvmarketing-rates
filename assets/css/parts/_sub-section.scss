@@ -1,0 +1,46 @@
+.sub-section {
+  margin-block: 40px;
+
+  & > .title,
+  .rates-section__heading .title {
+    margin: 0;
+    margin-bottom: 10px;
+
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 1.2;
+    color: #435259;
+
+    @media (max-width: 576px) {
+      margin-bottom:15px;
+    }
+  }
+
+  .sub-title {
+    margin: 0;
+    margin-top: 4px;
+
+    font-size: 14px;
+    font-weight: 500;
+    color: #B1BDC3;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 576px) {
+    & > .title,
+    .rates-section__heading .title {
+      font-size: 30px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    margin-block: 50px;
+  }
+}

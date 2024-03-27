@@ -1,0 +1,17 @@
+@import "parts/icon";
+@import "parts/sub-section";
+@import "parts/service-item";
+@import "parts/rate-info-block";
+@import "parts/rate-short-info";
+@import "parts/rate-table-row";
+@import "parts/rate-table";
+
+@import "parts/blog";
+@import "parts/rates-section";
+@import "parts/short-blog-section";
+
+@import "parts/service-page";
+
+.main_wrap.main_wrap--no-overflow {
+  overflow: unset;
+}
